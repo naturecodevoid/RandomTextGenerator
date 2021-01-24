@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>RandomTextGenerator JavaScript/HTML</title>
+        <script src="./index.js"></script>
+    </head>
+    <body>
+        <input type="radio" id="type-main" name="type" value="type-main" checked="true" />
+        <label for="type-main"
+            >Normal
+            <ul id="main">
+                <li>
+                    <label for="type-main-length">Length (default: 10) > </label
+                    ><input type="number" id="type-main-length" name="type-main-length" value="10" min="1" />
+                </li>
+                <li>
+                    <label for="type-main-lletters">Use lowercase letters > </label
+                    ><input
+                        type="checkbox"
+                        id="type-main-lletters"
+                        name="type-main-lletters"
+                        value="type-main-lletters"
+                        checked="true"
+                    />
+                </li>
+                <li>
+                    <label for="type-main-uletters">Use uppercase letters > </label
+                    ><input
+                        type="checkbox"
+                        id="type-main-uletters"
+                        name="type-main-uletters"
+                        value="type-main-uletters"
+                        checked="true"
+                    />
+                </li>
+                <li>
+                    <label for="type-main-numbers">Use numbers > </label
+                    ><input
+                        type="checkbox"
+                        id="type-main-numbers"
+                        name="type-main-numbers"
+                        value="type-main-numbers"
+                        checked="true"
+                    />
+                </li>
+                <li>
+                    <label for="type-main-symbols">Use symbols > </label
+                    ><input type="checkbox" id="type-main-symbols" name="type-main-symbols" value="type-main-symbols" />
+                </li>
+                <li>
+                    <label for="type-main-underscores">Use underscores > </label
+                    ><input
+                        type="checkbox"
+                        id="type-main-underscores"
+                        name="type-main-underscores"
+                        value="type-main-underscores"
+                        checked="true"
+                    />
+                </li>
+                <li>
+                    <label for="type-main-dashes">Use dashes > </label
+                    ><input type="checkbox" id="type-main-dashes" name="type-main-dashes" value="type-main-dashes" />
+                </li>
+            </ul> </label
+        ><br />
+
+        <input type="radio" id="type-custom" name="type" value="type-custom" />
+        <label for="type-custom"
+            >Custom characters
+            <ul id="custom">
+                <li>
+                    <label for="type-custom-length">Length (default: 10) > </label
+                    ><input type="number" id="type-custom-length" name="type-custom-length" value="10" min="1" />
+                </li>
+                <li>
+                    <label for="type-custom-characters">Characters > </label
+                    ><input
+                        type="text"
+                        id="type-custom-characters"
+                        name="type-custom-characters"
+                        placeholder="Type characters here"
+                        style="width: 400px;"
+                    />
+                </li></ul
+        ></label>
+        <button type="button" onclick="run();">Generate</button>
+        <p>
+            Result >
+            <!-- https://stackoverflow.com/a/4067488 -->
+            <input
+                onclick="this.setSelectionRange(0, this.value.length);"
+                id="result"
+                type="text"
+                value=""
+                style="width: 467px;"
+                readonly
+            />
+        </p>
+    </body>
+</html>
